@@ -85,12 +85,9 @@ flutter:
     - family: Lust
       fonts:
         - asset: fonts/Lust-Rg.ttf
-<<<<<<< HEAD
     - family: Brandon_Light
       fonts:
         - asset: fonts/Brandon_light.otf 
-=======
->>>>>>> 7048c1b311e8be266ec39ec1158b57482e434507
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
