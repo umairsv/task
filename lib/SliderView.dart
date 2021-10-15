@@ -28,7 +28,7 @@ class _SliderViewState extends State<SliderView> {
             Text(
               'M I N D F U L N E S S',
               style: TextStyle(
-                fontFamily: 'Brandon_Light',
+                fontFamily: 'Brandon_light',
                 fontSize: 20,
               ),
             ),
