@@ -19,7 +19,7 @@ class _CarouselViewState extends State<CarouselView> {
 
     return CarouselSlider(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height / 1.2,
+        height: MediaQuery.of(context).size.height / 1.3,
         viewportFraction: 1,
         enableInfiniteScroll: false,
       ),
