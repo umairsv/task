@@ -1,10 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unnecessary_this, avoid_print
 
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:kite_task/SliderView.dart';
-=======
->>>>>>> 7048c1b311e8be266ec39ec1158b57482e434507
 
 void main() {
   runApp(const MyApp());
@@ -81,10 +77,6 @@ class _MyAppState extends State<MyApp> {
                     fontSize: 40,
                   ),
                 ),
-<<<<<<< HEAD
-                SliderView(),
-=======
->>>>>>> 7048c1b311e8be266ec39ec1158b57482e434507
               ],
             ),
           ),
