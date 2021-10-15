@@ -19,48 +19,63 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: Padding(
-            // padding: const EdgeInsets.only(left: 10, right: 10),
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset('assets/hamburgerIcon.png'),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
-                          child: GestureDetector(
-                            child: Image.asset(
-                                'assets/Journal_Slider_Icon_NL.png'),
+                Container(
+                  height: 20,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset('assets/hamburgerIcon.png'),
+                      Row(
+                        children: [
+                          GestureDetector(
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 5),
+                              child: Image.asset(
+                                this.isSliderViewSelected
+                                    ? 'assets/Journal_Slider_Icon_NL.png'
+                                    : 'assets/Journal_Slider_Icon_DL.png',
+                              ),
+                            ),
+                            onTap: () {
+                              setState(() {
+                                this.isSliderViewSelected = false;
+                              });
+                            },
+                          ),
+                          GestureDetector(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 5),
+                              child: Image.asset(this.isSliderViewSelected
+                                  ? 'assets/ListDL.png'
+                                  : 'assets/ListNL.png'),
+                            ),
                             onTap: () {
                               setState(() {
                                 this.isSliderViewSelected = true;
                               });
                             },
-                          ),
-                        ),
-                        GestureDetector(
-                          child: Image.asset(this.isSliderViewSelected
-                              ? 'assets/ListDL.png'
-                              : 'assets/ListNL.png'),
-                          onTap: () {
-                            this.isSliderViewSelected = false;
-                            print(this.isSliderViewSelected);
-                          },
-                        )
-                      ],
-                    ),
-                  ],
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
+                SizedBox(height: 20),
                 Text(
                   'Journal',
                   textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontFamily: 'Lust',
+                    fontSize: 40,
+                  ),
                 ),
               ],
             ),
