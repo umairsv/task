@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kite_task/CarouselView.dart';
 
 import 'SliderView.dart';
 import 'journal_listview.dart';
@@ -10,11 +11,10 @@ class ViewSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(selectorstatus)
-    {
-      return SliderView();
-    }else{
+    if (selectorstatus) {
       return JournalListView();
+    } else {
+      return CarouselView();
     }
   }
 }

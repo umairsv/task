@@ -14,7 +14,7 @@ class JournalListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 10; i++) {
       listTransactions.add(new JournalDataItem(
           id: '1',
           description: 'MINDFULNESS',
